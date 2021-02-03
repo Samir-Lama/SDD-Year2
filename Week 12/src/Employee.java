@@ -4,20 +4,22 @@ import java.util.Scanner;
 public class Employee {
     String idNum, hourlyWage;
 
-    public Employee(String idNum, String hourlyWage) throws IOException {
+    public Employee(String idNum, String hourlyWage){
         this.idNum = idNum;
         this.hourlyWage = hourlyWage;
-        new EmployeeException(idNum,hourlyWage);
+        EmployeeException emp = new EmployeeException(this.idNum, this.hourlyWage);
     }
-    public static void main(String[] args) throws IOException {
-        String empId, empWage;
+    public static void main(String args[]){
+        String id, hrWage;
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter employee id:");
-        empId = sc.next();
-        System.out.print("Enter employee hourly wage:");
-        empWage = sc.next();
-        Employee e;
-        e = new Employee(empId, empWage);
+        System.out.print("Enter Employee id:");
+        id = sc.next();
+        System.out.print("Enter Employee hourly wage:");
+        hrWage = sc.next();
+
+        Employee emp = new Employee(id, hrWage);
+
+
     }
 }
 
