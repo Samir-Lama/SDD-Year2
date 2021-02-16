@@ -6,15 +6,14 @@ public class CelciusConvertGUI extends JFrame{
     private JPanel mainPanel;
     private JButton calculateButton;
     private JTextField celciusTextField;
-    private JLabel titleLabel;
     private JLabel resultLabel;
+    private JLabel titleLabel;
 
     public CelciusConvertGUI(String title){
         this.setTitle(title);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(mainPanel);
         this.pack();
-        mainPanel.setLayout(null);
         calculateButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -26,7 +25,10 @@ public class CelciusConvertGUI extends JFrame{
 
     public static void main(String[] args){
         JFrame frame = new CelciusConvertGUI("Converter");
-        frame.setSize(500, 500);
+        frame.setSize(800,200);
         frame.setVisible(true);
+
     }
+
+
 }
