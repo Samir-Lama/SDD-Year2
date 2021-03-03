@@ -18,7 +18,7 @@ public class Point<A, B>{
     public A getA() {
         return a;
     }
-
+    
     public B getB() {
         return b;
     }
